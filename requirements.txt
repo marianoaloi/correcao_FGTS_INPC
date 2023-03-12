@@ -1,0 +1,2 @@
+xlsxwriter~=3.0.9
+PyPDF2~=3.0.1

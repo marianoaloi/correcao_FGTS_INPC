@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Maloi
+.idea/**
+/.idea/**
+PDF_FGTS/*.json
+**/*.xlsx
+**/*.pdf
