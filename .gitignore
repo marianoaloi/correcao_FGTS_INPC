@@ -134,3 +134,4 @@ dmypy.json
 PDF_FGTS/*.json
 **/*.xlsx
 **/*.pdf
+*.xlsx#
