@@ -168,7 +168,7 @@ class writeExcel():
     def novosJuros(self, workbook):
         worksheet = workbook.get_worksheet_by_name("Novos Juros")
         row = 0
-        with open('inpc.csv', 'r') as data:
+        with open(os.path.join(os.path.dirname(__file__),'inpc.csv'), 'r') as data:
             for line in csv.reader(data, delimiter='\t', ):
                 if (line[0] == 'Data'):
                     worksheet.write(row, 0, line[0])
