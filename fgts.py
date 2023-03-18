@@ -15,6 +15,8 @@ class readFGTSPDF:
     def __init__(self, root) -> None:
         self.fgtss = []
         self.root = root
+        if(not os.path.exists(self.root)):
+            os.mkdir(self.root)
 
     def header(self, fulltext):
         fields = re.findall(
@@ -297,5 +299,6 @@ class writeExcel():
 
 if __name__ == "__main__":
     root = os.path.join(os.path.dirname(__file__),"PDF_FGTS")
+    print(root)
     fgtsObj = readFGTSPDF(root).extract() # json.load(open(os.path.join(root, 'fgts.json')))  # None # 
     writeExcel(root=root, objFGTS=fgtsObj).write(objFGTS=fgtsObj)
